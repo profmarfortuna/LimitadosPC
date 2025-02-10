@@ -1,0 +1,143 @@
+/* GLOBAL */
+
+
+/* GOOGLE FONTS - ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ESTILIZAÇÃO GENERICA */
+
+/* PSEUCO CLASSE QUE CONTÉM VARIAVEIS COM PADRÃO DE CORES */
+
+:root{
+    --main-color:#007BFF;/*PADRÃO COR PRINCIPAL*/
+    --bg: #0d82ff;/*COR PADRÃO DE FUNDO*/
+    --bg-card: #fff1ff; /*COR PADRÃO DOS CARDS*/
+    --border-color: 0.1rem solid #007BFF; /*COR PADRÃO DAS BORDAS*/
+    
+    /*ESTILIZAÇÃO PADRÃO DE TODO SITE. PARA TAL, DEVEMOS 1º LIMPAR/ZERAR ALGUMAS PROPRIEDADES JÁ DEFINIDA NO NAVEGADOR. DESSA FORMA, PODEMOS TER CONTROLE TOTAL NA ESTILIZAÇÃO*/
+}
+
+    *{font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0 ;
+
+    /* box-sizing faz  o navegador não calcular a dimensão de um elemento, ou seja, somando bordas e margens com altura e largura */
+    box-sizing: border-box;
+    outline: none;/*Contorno*/
+    border: none;
+    text-decoration: none;/*Removido o padrão para os links*/
+    text-transform: capitalize;/*PRIMEIRA LETRA MAISCULA EM DESTAQUE COM TAMANHO MAIOR*/
+    transition: 0.2s linear;
+
+    }
+
+    /*PADRÃO PARA TODOS OS ELEMENTOS QUE ESTÃO NO HTML/SITE*/
+
+    html{
+        font-size: 62.5%;
+
+        /*OVERFLOW-X: UTILIZAR O VALOR HIDDEN NA PROPRIEDADE OVERFLOW-X, QUE IRÁ OCULTAR QUALQUER CONTEÚDO, QUE ESTEJA NA HORIZONTAL, E QUE ULTRAPASSE A ÁREA VISÍVEL DO MEU ELEMENTO*/
+        overflow-x: hidden;
+
+        /*scroll-padding-top: ADICIONA UM ESPAÇO EXTRA NO TOPO DA ÁREA VISÍVEL, QUANDO ROLAR PARA ALGUM ALVO, POR EXEMPLO: QUANDO CLICAR EM UM LINK DE ÂNCORA QUEREMOS QUE ELE SUBA DEXANDO UM ESPAÇO*/
+        scroll-padding-top: 9rem;
+
+        /*scroll-behavior: COMPORTAMENTO SUAVE NA ROLAGEM DA PÁGINA QUANDO UM LINK INTERNO É CLICADO*/
+        scroll-behavior: smooth;
+
+    }
+
+
+    
+/* Estilização da barra de rolagem*/ 
+/*para alterar as configurações padrão de barra de rolagem, utilizaremos alguns pseudos seletores*/
+
+/* Definição da largura da barra de rolagem */
+
+    html::-webkit-scrollbar{
+        width: 0.8em;
+        
+    }
+/* adição da transparencia da barra de rolagem */
+    html::-webkit-scrollbar-track{
+        background: transparent;
+
+    }
+/* Aparencia da barra de rolagem */
+    html::-webkit-scrollbar-thumb{
+        background: #007BFF;
+        border-radius: 5rem;
+
+    }
+
+/* Padrão de todos elementos da body */
+    body{
+        background: var(--bg);
+    }
+    
+/*DEFINIÇÃO DO PADRÃO DAS SEÇÕES*/
+section{
+    padding: 10rem 7%;
+}
+
+/*PADRÃO DAS CLASSES DOS TITÚLO H1*/
+.title{
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;/*TUDO EM MAIÚSCULO*/
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+
+.title span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+/*ESTILIZAÇÃO PADRÃO DOS LINKS COM APARÊNCIA DE BOTÃO*/
+.btn{
+    color: #fff;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    background: var(--main-color);
+    padding: 0.9rem 3rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+
+.btn:hover{
+    letter-spacing: 0.2rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D8E1F3;
+}
+
+header {
+    padding: 5px 5px 10px 10px;
+    text-align: center;
+    border-radius: 10pt;
+    margin-left: 0pt;
+    margin-right: 0pt;
+
+    color: #ffffff;
+    box-shadow: 0 5px 4px #007BFF;
+}
+
+.header .navbar a{
+    color: #fff;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    align-items: center;
+    
+}
+
+.header .navbar a:hover{
+    color: #ffee00;
+    border-bottom: 0.1rem solid #ffee00;
+    padding-bottom: 0.5rem;
+}

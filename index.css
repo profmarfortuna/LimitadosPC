@@ -1,0 +1,254 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+.header{
+    background: #007BFF;
+    align-items: center;
+    
+    /*justify-content: space-between espaçamento entre todos os elementos, ocupando todo o espaço livre*/
+    justify-content: space-between;
+    padding: 2.0rem 7%;
+    border-bottom: rgb(20, 18, 18);
+    position: fixed;    
+    top: 0rem;
+    left: 0;
+    right: 0;
+    align-items: center;
+
+    /*Z-INDEX - USADA PARA ORGANIZAR OS MENUS. ASSOCIADO À PROPRIEDADE POSITION: fixed, relative, absolute ou sticky*/
+    z-index: 1000;
+}
+
+
+
+.header .logo a img{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    align-items: center;
+    position: fixed; top: 5px; left: -212px; width: 15%; height: 300%; 
+}
+.header.navbar{
+    align-items: center;
+    padding-right: 30px;
+    
+}
+
+/*O ÍCONE DO MENU NÃO PODE ESTAR VISÍVEL NO LAYOUT DE TELA PC OU TABLET. SÓ SERÁ VISÍVEL NO LAYOUT DE TELA CELULAR*/
+#menu-btn{
+    display: none;
+}
+
+/*1ª SEÇÃO - HOME*/
+
+.home{ 
+    position: relative;
+    min-height: 85vh; /*V=view, H=height (altura)*/
+    display: flex;
+    align-items: center;
+    background: url(imagens/Profissional.png)no-repeat;
+    background-size: cover;/*cobre toda a área do background*/
+    background-position: center;
+    border-bottom: var(--border-color);
+}
+
+/*APLICANDO COR DE MARCA DÁGUA NA IMAGEM DE FUNDO*/
+.home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.home .content{
+    max-width: 60rem;
+    position: relative;
+    z-index: 2;
+}
+
+.home .content h3{
+    color: #fff;
+    font-size: 6rem;
+    text-transform: uppercase;/*MAIÚSCULO*/
+}
+
+.home .content p{
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    line-height: 1.8;/*ESPAÇAMENTO ENTRE LINHAS*/
+    font-weight: lighter;/*NEGRITO LEVE*/
+    padding: 1rem 0;
+}
+/*2ª SEÇÃO - ABOUT/SOBRE*/
+
+.about .row{
+    display: flex;
+    align-items: center;
+    background: rgb(255, 255, 255)  ;
+    flex-wrap: wrap;/*CASO O CONTEÚDO UTRAPASSE A DIMENSÃO VISÍVEL DO CONTAINER, HAVERÁ UMA QUEBRA DOS ELEMENTOS*/
+    border-radius: 20cm ;
+    border: var(--border-color);
+}
+
+.about .row .image{
+    flex: 1 1 45rem;/*1 fração de aumento, 1 fração de redução dentro do limite do tamanho de 45rem*/
+}
+
+.about .row .image img{
+    width: 100%;
+}
+
+.about .row .content{
+    /*OS ELEMENTOS GANHAM DIMENSÃO DENTRO DO CONTAINER. o 1º valor é o tamanho que cresce, o 2º é o tamanho que reduz e o 3º valor é o tamanho limite para crescer ou reduzir*/
+    flex: 1 1 45rem;
+
+    padding: 2rem;
+}
+
+.about .row .content h3{
+    color: #007BFF;
+    font-size: 3rem;
+}
+
+.about .row .content p{
+    color: rgb(94, 142, 224);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+/* FOOTER */
+
+/* FOOTER-CONTATOS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+.contact-container {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    gap: 30px; /* Espaçamento entre os cartões e o formulário */
+    margin: 55px 3rem;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px; /* Define uma largura fixa para os cartões */
+    transition: transform 0.3s;
+}
+
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.contact-card h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #007BFF;
+}
+
+.contact-card p {
+    color: #666;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Garante que o formulário ocupe toda a largura disponível, mas respeite o máximo de 400px */
+}
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .contact-container {
+        gap: 20px; /* Reduz o espaço entre os itens em telas pequenas */
+    }
+
+    .contact-card {
+        width: 100%; /* Faz os cartões ocuparem 100% da largura disponível em telas pequenas */
+        margin: 10px 0; /* Adiciona margem vertical para os cartões */
+    }
+
+    .container {
+        width: 100%; /* O formulário ocupa toda a largura disponível */
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00b809;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:#007BFF;
+}
+
+#responseMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: #007BFF;
+}
+
+
+a.home-link {
+    color: #007BFF; 
+    text-decoration: none; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    display: inline-block; 
+}
+
+a.home-link:hover {
+    text-decoration: underline; 
+}

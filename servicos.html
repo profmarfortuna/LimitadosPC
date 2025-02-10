@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Adicionando o link do Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="servicos.css" type="text/css">
+    <title>Serviços</title>
+</head>
+<body>
+    <header>
+        <h1 class="animate__animated animate__fadeIn">Limpidex Refrigeração</h1>
+        <nav class="animate__animated animate__fadeIn">
+            <ul>
+                <a href="index.html" class="home-button">Home</a> 
+                <a href="index.html"><img src="imagens/Logo da EMPRESA.png" alt="Logo do Pinguim" style="position:absolute; top: 5px; left: 10px; width: 180px;"></a>
+               
+            </ul>
+        </nav>
+    </header>
+
+    <section id="servicos" class="animate__animated animate__fadeIn">
+        <h2>Serviços Oferecidos</h2>
+        <div class="servico">
+            <h3>Limpeza de Filtro</h3>
+            <p>A limpeza regular do filtro é essencial para o bom funcionamento do ar condicionado.</p>
+        </div>
+        <div class="servico">
+            <h3>Revisão Completa</h3>
+            <p>Realizamos uma revisão completa do sistema para garantir que tudo esteja funcionando de forma eficiente.</p>
+        </div>
+        <div class="servico">
+            <h3>Reparo de Equipamentos</h3>
+            <p>Consertamos qualquer tipo de avaria nos aparelhos de ar condicionado de forma rápida e eficiente.</p>
+        </div>
+        <div class="servico">
+            <h3>Instalação de Ar Condicionado</h3>
+            <p>Trabalhamos com a instalação de diversos modelos de ar condicionado, garantindo qualidade e segurança.</p>
+        </div>
+    </section>
+
+    <div class="animate__animated animate__fadeIn">
+        <div class="container">
+            <h1>Solicitação de Orçamento</h1>
+            <form id="budget-form">
+                <label for="name"><h4>Nome:</h4></label>
+                <input type="text" id="name" required>
+
+                <label for="email"><h4>E-mail:</h4></label>
+                <input type="email" id="email" required>
+
+                <label for="phone"><h4>Telefone:</h4></label>
+                <input type="tel" id="phone" required maxlength="15" minlength="7" pattern="\d{7,15}" title="Digite um número de telefone válido (somente números, entre 7 e 15 dígitos)" oninput="validatePhone()">
+
+                <label for="service"><h3>Serviço Requerido:</h3></label>
+                <select id="service" required>
+                    <option value="">Selecione</option>
+                    <option value="instalacao">Instalação</option>
+                    <option value="manutencao">Manutenção</option>
+                    <option value="reparo">Reparo</option>
+                </select>
+
+                <label for="description"><h3>Descrição do Serviço:</h3></label>
+                <textarea id="description" rows="3" required></textarea>
+
+                <button type="submit">Enviar Orçamento</button>
+            </form>
+            <div id="response-message" class="hidden"></div>
+        </div>
+    </div>
+
+    <script src="servicos.js"></script>
+
+    <footer>
+        <p>&copy; 2024 Limpidex Empresa de Manutenção de Ar Condicionado. Todos os direitos reservados. Produzido por Matheus</p>
+    </footer>
+    <script src="servicos.js"></script>
+    <script src="script.js"></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+      <script>

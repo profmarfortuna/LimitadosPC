@@ -1,0 +1,300 @@
+
+/* Estilização da barra de rolagem*/ 
+/*para alterar as configurações padrão de barra de rolagem, utilizaremos alguns pseudos seletores*/
+
+/* Definição da largura da barra de rolagem */
+
+    html::-webkit-scrollbar{
+        width: 0.8em;
+        
+    }
+/* adição da transparencia da barra de rolagem */
+    html::-webkit-scrollbar-track{
+        background: transparent;
+
+    }
+/* Aparencia da barra de rolagem */
+    html::-webkit-scrollbar-thumb{
+        background: #007BFF;
+        border-radius: 5rem;
+
+    }
+
+
+/* ESTILIZAÇÃO PERSONALIZADA */
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    list-style-type: none;
+    border-top: 2px solid #ffd900;
+}     
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D8E1F3;
+}
+header {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 20px 10px;
+    text-align: center;
+    border-radius: 10pt;
+    margin-left: -20px;
+    margin-right: 0pt;
+}
+.home-button {
+            display: inline-block;
+            background-color: #ffd900; /* Cor de fundo */
+            color: #333; /* Cor do texto */
+            padding: 10px 20px; /* Espaçamento interno */
+            text-decoration: none; /* Remove sublinhado */
+            font-size: 16px; /* Tamanho da fonte */
+            font-weight: bold; /* Negrito */
+            border: 2px solid #ffd900; /* Borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: background-color 0.3s, color 0.3s; /* Transição */
+        }
+
+        .home-button:hover {
+            background-color: #333; /* Fundo ao passar o mouse */
+            color: #ffd900; /* Texto ao passar o mouse */
+        }
+
+/* Estilos para o Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #0056b3;
+    color: #ffd900;
+}
+
+/* Logo */
+.navbar .logo img {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    /* width: 180px;
+    width: 100px;
+    height: 90px;
+    margin-right: 20px; */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        font-size: 1.4rem;
+        padding: 8px 15px;
+    }
+}
+
+/* header {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 5px 5px 10px 10px;
+    text-align: center;
+    border-radius: 10pt;
+    margin-left: 150pt;
+    margin-right: 0pt;
+} */
+
+.faq {
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    transition: background-color 0.3s;
+}
+
+.faq-item:hover {
+    background-color: #e9ecef;
+}
+
+.faq-question {
+    cursor: pointer;
+    color: #007BFF;
+    transition: color 0.2s;
+}
+
+.faq-question:hover {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.faq-answer {
+    
+    display: none;
+    margin-top: 5px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 3px solid #007BFF;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.faq-question {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 0.5s forwards ease-out;
+}
+
+.faq-item:nth-child(1) .faq-question {
+    animation-delay: 0.2s;
+}
+
+.faq-item:nth-child(2) .faq-question {
+    animation-delay: 0.4s;
+}
+
+.faq-item:nth-child(3) .faq-question {
+    animation-delay: 0.6s;
+}
+
+.faq-item:nth-child(4) .faq-question {
+    animation-delay: 0.8s;
+}
+
+.faq-item:nth-child(5) .faq-question {
+    animation-delay: 1s;
+}
+
+
+.faq-answer {
+    display: none;
+    margin-top: 5px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 3px solid #007BFF;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 0.3s forwards ease-out;
+}
+
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 
+h1 {
+    padding: 20px 0 20px 0;
+    width: auto;
+    border-radius: 10px;
+    background: #007BFF;
+    text-align: center;
+    color: #fafafa;
+}
+
+
+
+hover { 
+    font-weight: normal;
+    color: #fbff00;
+    text-decoration: none;
+    margin-left: 0px;
+    padding-top: 3px;
+    padding-right: 10px;
+    padding-left: 5px;
+    border-top: 2px solid #ffd900;
+}
+
+#menu ul {
+    list-style-type: none; 
+    padding: 0; 
+}
+#menu ul a {
+    color: #007BFF;
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    align-items: center;    
+    margin-top: 1rem;
+    
+    font-size: 1.7rem;
+    background: #fff;
+    padding: 0rem 3rem ;
+    z-index: 1000;
+    border-radius: 2rem;
+}
+#menu ul a:hover{
+    letter-spacing: 0.2rem;
+    color: #0056b3 ;
+    border-bottom: 0.1rem solid #fff;
+    padding-bottom: 0.5rem;
+}
+
+#menu img {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 180px;
+} */

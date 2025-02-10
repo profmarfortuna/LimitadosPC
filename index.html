@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="geral.css" type="text/css">
+    <link rel="stylesheet" 
+    href="index.css" type="text/css">
+    <title>Limpidex</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">
+                    <img src="imagens/Logo da EMPRESA.png" alt="Logo do Pinguim" style="position:absolute; top: 0px; left: 25px; width: 100px; height: 90px;">
+                </a>
+            </div>
+            <a href="#home">Home</a>
+            <a href="#contact">Contate-Nós</a>
+            <a href="Faq.html">FAQs</a>
+            <a href="#about">Quem Somos?</a>
+            <a href="servicos.html">Serviços</a>
+        </nav>
+    </header>
+    
+   
+    <!-- 1ª SEÇÃO - INICIO/HOME -->
+    <section class="home" id="home">
+        <div class="content">
+            <h3>Bem Vindo a Limpidex Refrigeração, Sua maior referência!</h3>
+            <p>Aproveite Junto com a Limpidex o Melhor Orçamento do estado</p>
+            <a href="servicos.html" class="btn">Faça Seu Orçamento</a>
+        </div>
+    </section>
+    
+    <!-- 2ª SEÇÃO - ABOUT/SOBRE -->
+    <section class="about" id="about">
+        <h1 class="title"><span>sobre</span> nós</h1>
+        <div class="row">
+            <div class="video">
+                <video src="imagens/WhatsApp Video 2024-10-22 at 09.07.03.mp4" controls style="width: 70%; height: 40%; margin-bottom: -1px; border-radius: 20px;" alt="Profissional do ar-condicionador">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+            <div class="content">
+                <h3>Porquê a Limpidex é Referência?</h3>
+                <p>A Limpidex Refrigeração, fundada em 29 de setembro de 2010 e registrada sob o CNPJ 12.602.361/0001-97, oferece serviços especializados de instalação e manutenção de sistemas de ar condicionado, ventilação e refrigeração. Localizada em Cariacica, no Espírito Santo, a empresa atua com excelência no segmento de Refrigeração - Assistência Técnica.</p>
+                <p>Missão: Oferecer o melhor serviço de manutenção e instalação de ar condicionado, garantindo qualidade e satisfação aos clientes. Visão: Expandir suas operações no Espírito Santo, criando filiais e aprimorando os serviços para atender ainda mais a demanda do mercado. Valores: A empresa prioriza a qualidade e o atendimento personalizado, sempre buscando aprimorar seus serviços e fortalecer o relacionamento com os clientes.</p>
+                <a href="servicos.html" class="btn">Seja Nosso Cliente</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3ª SEÇÃO - SERVICE/Serviços -->
+    <section class="service" id="service"></section>
+
+    <!-- FOOTER- CONTATOS -->
+    <footer>
+        
+        <section class="contact" id="contact">
+            <h1>Contatos da Empresa</h1>
+            <div class="contact-container">
+                <div class="contact-card">
+                    <h2>Zeca do Ar</h2>
+                    <p>Email: <a href="mailto:eozecaamuleke@hotmail.com">eozecaamuleke@hotmail.com</a></p>
+                    <p>Telefone: (27) 99922-2841</p>
+                </div>
+                <div class="contact-card">
+                    <h2>Erica De Oliveira</h2>
+                    <p>Email: <a href="mailto:ericaalegre@hotmail.com">ericaalegre@hotmail.com</a></p>
+                    <p>Telefone: (27) 99275-0605</p>
+                </div>
+                <div class="contact-card">
+                    <h2>Contato Geral</h2>
+                    <p>Email: <a href="mailto:limpidexrefrigeracao@hotmail.com">limpidexrefrigeracao@hotmail.com</a></p>
+                    <p>Telefone: (27) 3226-6266</p>
+                </div>
+            </div>
+
+            <div class="container">
+
+                <h1>Contato para Serviços de Refrigeração</h1>
+                <form id="formulario">
+
+                    <label for="nome">Nome:</label>
+
+                    <input type="text" id="nome" name="nome" required>
+
+                    <br>
+                    <label for="mensagem">Mensagem:</label>
+
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+
+                    <br>
+                    <button type="button" onclick="enviarWhatsApp()">
+                        Enviar para WhatsApp
+                        <ion-icon name="logo-whatsapp"></ion-icon> 
+                    </button>
+                    
+                </form>
+            
+                <script>
+
+                    function enviarWhatsApp() {
+                        // Captura os dados do formulário
+                        const nome = document.getElementById('nome').value;
+                        const mensagem = document.getElementById('mensagem').value;
+                        
+                        // Formata o número do telefone 
+                        const telefone = "+5527999222841";                        
+                        // Cria a mensagem formatada
+                        const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+                        
+                        // Codifica a mensagem para a URL
+                        const textoCodificado = encodeURIComponent(texto);
+                        
+                        // Cria o link do WhatsApp
+                        const url = `https://wa.me/${telefone}?text=${textoCodificado}`;
+                        
+                        // Redireciona para o link
+                        window.open(url, '_blank');
+                    }
+                    
+                </script>
+            </div>
+        </section>
+        <center><p>© 2024 Empresa de Manutenção de Ar Condicionado. Todos os direitos reservados. Produzido por Hérick</p></center>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <script src="script.js"></script>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+    </body> 
+    
+
+</body>
+</html>
+<!--style="position:relative; width: 10px; height: auto;" /> 

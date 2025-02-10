@@ -1,0 +1,215 @@
+    /*PADRÃO PARA TODOS OS ELEMENTOS QUE ESTÃO NO HTML/SITE*/
+
+    html{
+        font-size: 62.5%;
+
+        /*OVERFLOW-X: UTILIZAR O VALOR HIDDEN NA PROPRIEDADE OVERFLOW-X, QUE IRÁ OCULTAR QUALQUER CONTEÚDO, QUE ESTEJA NA HORIZONTAL, E QUE ULTRAPASSE A ÁREA VISÍVEL DO MEU ELEMENTO*/
+        overflow-x: hidden;
+
+        /*scroll-padding-top: ADICIONA UM ESPAÇO EXTRA NO TOPO DA ÁREA VISÍVEL, QUANDO ROLAR PARA ALGUM ALVO, POR EXEMPLO: QUANDO CLICAR EM UM LINK DE ÂNCORA QUEREMOS QUE ELE SUBA DEXANDO UM ESPAÇO*/
+        scroll-padding-top: 10rem;
+
+        /*scroll-behavior: COMPORTAMENTO SUAVE NA ROLAGEM DA PÁGINA QUANDO UM LINK INTERNO É CLICADO*/
+        scroll-behavior: smooth;
+
+    }
+
+
+    
+/* Estilização da barra de rolagem*/ 
+/*para alterar as configurações padrão de barra de rolagem, utilizaremos alguns pseudos seletores*/
+
+/* Definição da largura da barra de rolagem */
+
+    html::-webkit-scrollbar{
+        width: 0.8em;
+        
+    }
+/* adição da transparencia da barra de rolagem */
+    html::-webkit-scrollbar-track{
+        background: transparent;
+
+    }
+/* Aparencia da barra de rolagem */
+    html::-webkit-scrollbar-thumb{
+        background: #007BFF;
+        border-radius: 5rem;
+
+    }
+
+    
+/*DEFINIÇÃO DO PADRÃO DAS SEÇÕES*/
+section{
+    
+    padding: 1rem 7%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    list-style-type: none;
+    border-top: 2px solid #ffd900;
+}
+
+.home-button {
+    display: inline-block;
+    background-color: #ffd900; /* Cor de fundo do botão */
+    color: #007BFF; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado de links */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    border: 2px solid #007BFF; /* Borda */
+    border-radius: 5px; /* Borda arredondada */
+    transition: background-color 0.3s, color 0.3s; /* Animação suave */
+}
+
+.home-button:hover {
+    background-color: #f4f4f4; /* Cor de fundo ao passar o mouse */
+    color: #007BFF; /* Cor do texto ao passar o mouse */
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    background-color: #f0f8ff;
+    line-height: 1.6;
+}
+
+header {
+    margin-top: auto;
+    background-color: #007BFF;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 2px 4px #007BFF;
+}
+
+nav{
+align-items: center;
+}
+nav ul {
+    font-size: 34px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+nav ul a{
+    color: #fff;
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 2rem;
+    background: var(--main-color);
+    padding: 0.9rem 3rem;
+    cursor: pointer;
+    border-radius: 2rem;
+}
+nav ul a:hover{
+   
+    letter-spacing: 0.2rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 4em;
+    align-items: center;
+}
+.container h1{
+    color: #007BFF;
+}
+h2 {
+    font-size: 40px;
+    text-align: center;
+    color: #007BFF;
+    margin-top: 20px;
+}
+h3{
+    color: #007BFF;
+    font-size: 3rem;
+}
+
+h4{
+    color: #007BFF;
+    font-size: small;
+}
+main {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+.servico {
+    background: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #007BFF;
+    transition: transform 0.2s;
+}
+
+.servico:hover {
+    transform: translateY(-5px);
+}
+
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #007BFF;
+}
+
+
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007BFF;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
